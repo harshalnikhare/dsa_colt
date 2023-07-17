@@ -1,4 +1,4 @@
-import { swap } from "./sort";
+import { swap } from "./swap";
 
 function bubbleSort(arr) {
   let noSwaps;
