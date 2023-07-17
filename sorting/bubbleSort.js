@@ -1,6 +1,5 @@
-function swap(arr, idx1, idx2) {
-  return ([arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]);
-}
+import { swap } from "./sort";
+
 function bubbleSort(arr) {
   let noSwaps;
   for (let i = arr.length; i > 0; i--) {
