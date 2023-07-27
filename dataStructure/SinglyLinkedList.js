@@ -16,7 +16,6 @@ class SinglyLinkedList {
     if (!this.head) {
       this.head = this.tail = newNode;
     } else {
-      console.log(this.head === this.tail);
       this.tail.next = newNode;
       this.tail = newNode;
     }
