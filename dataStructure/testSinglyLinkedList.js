@@ -115,7 +115,6 @@ class SinglyLinkedList {
     return removedNode;
   }
 
-  // isko samajhna hai
   reverse() {
     let node = this.head;
     this.head = this.tail;
@@ -127,10 +126,19 @@ class SinglyLinkedList {
     for (let i = 0; i < this.length; i++) {
       next = node.next;
       node.next = prev;
-      prev = next;
+      prev = node;
       node = next;
     }
 
     return this;
   }
 }
+
+let list = new SinglyLinkedList();
+list.push(1);
+list.push(2);
+list.push(3);
+list.push(4);
+list.push(5);
+
+console.log(JSON.stringify(list.reverse()));
