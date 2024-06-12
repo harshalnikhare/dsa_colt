@@ -4,15 +4,15 @@ function sameFrequency(num1, num2) {
 
   if (num1.length !== num2.length) return false;
 
-  const freqCounter1 = {};
+  const freqCounter = {};
 
   for (let num of num1) {
-    freqCounter1[num] = (freqCounter1[num] || 0) + 1;
+    freqCounter[num] = (freqCounter[num] || 0) + 1;
   }
 
   for (let num of num2) {
-    if (!freqCounter1[num]) return false;
-    else freqCounter1[num]--;
+    if (!freqCounter[num]) return false;
+    else freqCounter[num]--;
   }
   return true;
 }
