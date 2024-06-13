@@ -1,23 +1,19 @@
 function minSubArrayLen(arr, num) {
-  let min = arr.length;
-  let sum = 0;
   let i = 0,
-    j = 0;
+    j = 0,
+    sum = 0,
+    min = arr.length;
 
   while (i < arr.length) {
     if (sum < num && j < arr.length) {
       sum += arr[j];
       j++;
     } else if (sum >= num) {
-      min = Math.min(min, j - i);
       sum -= arr[i];
+      min = Math.min(min, j - i);
       i++;
-    } else {
-      break;
-    }
-    // console.log(sum, min);
+    } else break;
   }
-
   return min === arr.length ? 0 : min;
 }
 
